@@ -1,6 +1,6 @@
-import {deburr, isPlainObject, trim, upperFirst} from 'lodash'
-import {basename, dirname, extname, normalize, sep, posix} from 'path'
-import {JSONSchema, LinkedJSONSchema, Parent} from './types/JSONSchema'
+import { deburr, isPlainObject, trim, upperFirst } from 'lodash'
+import { basename, dirname, extname, normalize, sep, posix } from 'path'
+import { JSONSchema, LinkedJSONSchema, Parent } from './types/JSONSchema'
 
 // TODO: pull out into a separate package
 export function Try<T>(fn: () => T, err: (e: Error) => any): T {
@@ -102,7 +102,7 @@ export function traverse(
     traverse(schema.additionalProperties, callback, processed)
   }
   if (schema.items) {
-    const {items} = schema
+    const { items } = schema
     if (Array.isArray(items)) {
       traverseArray(items, callback, processed)
     } else {
@@ -221,7 +221,7 @@ export function log(style: LogStyle, title: string, ...messages: unknown[]): voi
   }
   console.info(require('cli-color').whiteBright.bgCyan('debug'), getStyledTextForLogging(style)?.(title), ...messages)
   if (lastMessage) {
-    console.dir(lastMessage, {depth: 6, maxArrayLength: 6})
+    console.dir(lastMessage, { depth: 6, maxArrayLength: 6 })
   }
 }
 

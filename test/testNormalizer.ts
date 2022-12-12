@@ -1,9 +1,9 @@
 import test from 'ava'
-import {readdirSync} from 'fs'
-import {join} from 'path'
-import {JSONSchema, Options, DEFAULT_OPTIONS} from '../src'
-import {link} from '../src/linker'
-import {normalize} from '../src/normalizer'
+import { readdirSync } from 'fs'
+import { join } from 'path'
+import { JSONSchema, Options, DEFAULT_OPTIONS } from '../src'
+import { link } from '../src/linker'
+import { normalize } from '../src/normalizer'
 
 interface JSONTestCase {
   name: string

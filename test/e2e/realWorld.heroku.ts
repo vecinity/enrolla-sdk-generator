@@ -664,8 +664,7 @@ export const input = {
         },
         {
           description: 'Info for existing add-on attachment for an app.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/addon-attachments/{(%23%2Fdefinitions%2Fadd-on-attachment%2Fdefinitions%2FscopedIdentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/addon-attachments/{(%23%2Fdefinitions%2Fadd-on-attachment%2Fdefinitions%2FscopedIdentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -1246,8 +1245,7 @@ export const input = {
         },
         {
           description: 'Delete an existing add-on.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/addons/{(%23%2Fdefinitions%2Fadd-on%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/addons/{(%23%2Fdefinitions%2Fadd-on%2Fdefinitions%2Fidentity)}',
           method: 'DELETE',
           rel: 'destroy',
           targetSchema: {
@@ -1257,8 +1255,7 @@ export const input = {
         },
         {
           description: 'Info for an existing add-on.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/addons/{(%23%2Fdefinitions%2Fadd-on%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/addons/{(%23%2Fdefinitions%2Fadd-on%2Fdefinitions%2Fidentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -1318,8 +1315,7 @@ export const input = {
         {
           description:
             'Change add-on plan. Some add-ons may not support changing plans. In that case, an error will be returned.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/addons/{(%23%2Fdefinitions%2Fadd-on%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/addons/{(%23%2Fdefinitions%2Fadd-on%2Fdefinitions%2Fidentity)}',
           method: 'PATCH',
           rel: 'update',
           schema: {
@@ -1489,8 +1485,7 @@ export const input = {
       links: [
         {
           description: 'Info for an existing app feature.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/features/{(%23%2Fdefinitions%2Fapp-feature%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/features/{(%23%2Fdefinitions%2Fapp-feature%2Fdefinitions%2Fidentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -1513,8 +1508,7 @@ export const input = {
         },
         {
           description: 'Update an existing app feature.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/features/{(%23%2Fdefinitions%2Fapp-feature%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/features/{(%23%2Fdefinitions%2Fapp-feature%2Fdefinitions%2Fidentity)}',
           method: 'PATCH',
           rel: 'update',
           schema: {
@@ -2452,8 +2446,7 @@ export const input = {
       links: [
         {
           description: 'Info for existing result.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/builds/{(%23%2Fdefinitions%2Fbuild%2Fdefinitions%2Fidentity)}/result',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/builds/{(%23%2Fdefinitions%2Fbuild%2Fdefinitions%2Fidentity)}/result',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -2632,8 +2625,7 @@ export const input = {
         },
         {
           description: 'Info for existing build.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/builds/{(%23%2Fdefinitions%2Fbuild%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/builds/{(%23%2Fdefinitions%2Fbuild%2Fdefinitions%2Fidentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -2896,8 +2888,7 @@ export const input = {
         },
         {
           description: 'Delete an existing collaborator.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/collaborators/{(%23%2Fdefinitions%2Fcollaborator%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/collaborators/{(%23%2Fdefinitions%2Fcollaborator%2Fdefinitions%2Fidentity)}',
           method: 'DELETE',
           rel: 'destroy',
           targetSchema: {
@@ -2907,8 +2898,7 @@ export const input = {
         },
         {
           description: 'Info for existing collaborator.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/collaborators/{(%23%2Fdefinitions%2Fcollaborator%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/collaborators/{(%23%2Fdefinitions%2Fcollaborator%2Fdefinitions%2Fidentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -3016,8 +3006,7 @@ export const input = {
         },
         {
           description: 'Get config-vars for a release.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/releases/{(%23%2Fdefinitions%2Frelease%2Fdefinitions%2Fidentity)}/config-vars',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/releases/{(%23%2Fdefinitions%2Frelease%2Fdefinitions%2Fidentity)}/config-vars',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -3278,8 +3267,7 @@ export const input = {
         },
         {
           description: 'Delete an existing domain',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/domains/{(%23%2Fdefinitions%2Fdomain%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/domains/{(%23%2Fdefinitions%2Fdomain%2Fdefinitions%2Fidentity)}',
           method: 'DELETE',
           rel: 'destroy',
           targetSchema: {
@@ -3289,8 +3277,7 @@ export const input = {
         },
         {
           description: 'Info for existing domain.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/domains/{(%23%2Fdefinitions%2Fdomain%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/domains/{(%23%2Fdefinitions%2Fdomain%2Fdefinitions%2Fidentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -3633,8 +3620,7 @@ export const input = {
         },
         {
           description: 'Restart dyno.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/dynos/{(%23%2Fdefinitions%2Fdyno%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/dynos/{(%23%2Fdefinitions%2Fdyno%2Fdefinitions%2Fidentity)}',
           method: 'DELETE',
           rel: 'empty',
           targetSchema: {
@@ -3656,8 +3642,7 @@ export const input = {
         },
         {
           description: 'Stop dyno.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/dynos/{(%23%2Fdefinitions%2Fdyno%2Fdefinitions%2Fidentity)}/actions/stop',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/dynos/{(%23%2Fdefinitions%2Fdyno%2Fdefinitions%2Fidentity)}/actions/stop',
           method: 'POST',
           rel: 'empty',
           targetSchema: {
@@ -3668,8 +3653,7 @@ export const input = {
         },
         {
           description: 'Info for existing dyno.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/dynos/{(%23%2Fdefinitions%2Fdyno%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/dynos/{(%23%2Fdefinitions%2Fdyno%2Fdefinitions%2Fidentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -4176,8 +4160,7 @@ export const input = {
       links: [
         {
           description: 'Info for a process type',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/formation/{(%23%2Fdefinitions%2Fformation%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/formation/{(%23%2Fdefinitions%2Fformation%2Fdefinitions%2Fidentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -4227,8 +4210,7 @@ export const input = {
         },
         {
           description: 'Update process type',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/formation/{(%23%2Fdefinitions%2Fformation%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/formation/{(%23%2Fdefinitions%2Fformation%2Fdefinitions%2Fidentity)}',
           method: 'PATCH',
           rel: 'update',
           schema: {
@@ -4383,8 +4365,7 @@ export const input = {
         },
         {
           description: "Update an organization's Identity Provider",
-          href:
-            '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fname)}/identity-providers/{(%23%2Fdefinitions%2Fidentity-provider%2Fdefinitions%2Fid)}',
+          href: '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fname)}/identity-providers/{(%23%2Fdefinitions%2Fidentity-provider%2Fdefinitions%2Fid)}',
           method: 'PATCH',
           rel: 'update',
           schema: {
@@ -4411,8 +4392,7 @@ export const input = {
         },
         {
           description: "Delete an organization's Identity Provider",
-          href:
-            '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fname)}/identity-providers/{(%23%2Fdefinitions%2Fidentity-provider%2Fdefinitions%2Fid)}',
+          href: '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fname)}/identity-providers/{(%23%2Fdefinitions%2Fidentity-provider%2Fdefinitions%2Fid)}',
           method: 'DELETE',
           rel: 'destroy',
           targetSchema: {
@@ -4526,8 +4506,7 @@ export const input = {
         },
         {
           description: 'Info on an existing Inbound Ruleset',
-          href:
-            '/spaces/{(%23%2Fdefinitions%2Fspace%2Fdefinitions%2Fidentity)}/inbound-rulesets/{(%23%2Fdefinitions%2Finbound-ruleset%2Fdefinitions%2Fidentity)}',
+          href: '/spaces/{(%23%2Fdefinitions%2Fspace%2Fdefinitions%2Fidentity)}/inbound-rulesets/{(%23%2Fdefinitions%2Finbound-ruleset%2Fdefinitions%2Fidentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -5242,8 +5221,7 @@ export const input = {
         {
           description:
             'Delete an existing log drain. Log drains added by add-ons can only be removed by removing the add-on.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/log-drains/{(%23%2Fdefinitions%2Flog-drain%2Fdefinitions%2Fquery_identity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/log-drains/{(%23%2Fdefinitions%2Flog-drain%2Fdefinitions%2Fquery_identity)}',
           method: 'DELETE',
           rel: 'destroy',
           targetSchema: {
@@ -5253,8 +5231,7 @@ export const input = {
         },
         {
           description: 'Info for existing log drain.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/log-drains/{(%23%2Fdefinitions%2Flog-drain%2Fdefinitions%2Fquery_identity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/log-drains/{(%23%2Fdefinitions%2Flog-drain%2Fdefinitions%2Fquery_identity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -5526,8 +5503,7 @@ export const input = {
         {
           description:
             'Regenerate OAuth tokens. This endpoint is only available to direct authorizations or privileged OAuth clients.',
-          href:
-            '/oauth/authorizations/{(%23%2Fdefinitions%2Foauth-authorization%2Fdefinitions%2Fidentity)}/actions/regenerate-tokens',
+          href: '/oauth/authorizations/{(%23%2Fdefinitions%2Foauth-authorization%2Fdefinitions%2Fidentity)}/actions/regenerate-tokens',
           method: 'POST',
           rel: 'update',
           targetSchema: {
@@ -5767,8 +5743,7 @@ export const input = {
         },
         {
           description: 'Rotate credentials for an OAuth client',
-          href:
-            '/oauth/clients/{(%23%2Fdefinitions%2Foauth-client%2Fdefinitions%2Fidentity)}/actions/rotate-credentials',
+          href: '/oauth/clients/{(%23%2Fdefinitions%2Foauth-client%2Fdefinitions%2Fidentity)}/actions/rotate-credentials',
           method: 'POST',
           rel: 'update',
           targetSchema: {
@@ -6119,8 +6094,7 @@ export const input = {
         },
         {
           description: 'Delete an existing collaborator from an organization app.',
-          href:
-            '/organizations/apps/{(%23%2Fdefinitions%2Forganization-app%2Fdefinitions%2Fidentity)}/collaborators/{(%23%2Fdefinitions%2Forganization-app-collaborator%2Fdefinitions%2Fidentity)}',
+          href: '/organizations/apps/{(%23%2Fdefinitions%2Forganization-app%2Fdefinitions%2Fidentity)}/collaborators/{(%23%2Fdefinitions%2Forganization-app-collaborator%2Fdefinitions%2Fidentity)}',
           method: 'DELETE',
           rel: 'destroy',
           targetSchema: {
@@ -6130,8 +6104,7 @@ export const input = {
         },
         {
           description: 'Info for a collaborator on an organization app.',
-          href:
-            '/organizations/apps/{(%23%2Fdefinitions%2Forganization-app%2Fdefinitions%2Fidentity)}/collaborators/{(%23%2Fdefinitions%2Forganization-app-collaborator%2Fdefinitions%2Fidentity)}',
+          href: '/organizations/apps/{(%23%2Fdefinitions%2Forganization-app%2Fdefinitions%2Fidentity)}/collaborators/{(%23%2Fdefinitions%2Forganization-app-collaborator%2Fdefinitions%2Fidentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -6141,8 +6114,7 @@ export const input = {
         },
         {
           description: 'Update an existing collaborator from an organization app.',
-          href:
-            '/organizations/apps/{(%23%2Fdefinitions%2Forganization-app%2Fdefinitions%2Fidentity)}/collaborators/{(%23%2Fdefinitions%2Forganization-app-collaborator%2Fdefinitions%2Fidentity)}',
+          href: '/organizations/apps/{(%23%2Fdefinitions%2Forganization-app%2Fdefinitions%2Fidentity)}/collaborators/{(%23%2Fdefinitions%2Forganization-app-collaborator%2Fdefinitions%2Fidentity)}',
           method: 'PATCH',
           rel: 'update',
           schema: {
@@ -6565,8 +6537,7 @@ export const input = {
       links: [
         {
           description: 'Info for an existing organization feature.',
-          href:
-            '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fidentity)}/features/{(%23%2Fdefinitions%2Forganization-feature%2Fdefinitions%2Fidentity)}',
+          href: '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fidentity)}/features/{(%23%2Fdefinitions%2Forganization-feature%2Fdefinitions%2Fidentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -6589,8 +6560,7 @@ export const input = {
         },
         {
           description: 'Update an existing organization feature.',
-          href:
-            '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fidentity)}/features/{(%23%2Fdefinitions%2Forganization-feature%2Fdefinitions%2Fidentity)}',
+          href: '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fidentity)}/features/{(%23%2Fdefinitions%2Forganization-feature%2Fdefinitions%2Fidentity)}',
           method: 'PATCH',
           rel: 'update',
           schema: {
@@ -6720,8 +6690,7 @@ export const input = {
         {
           description: 'Revoke an organization invitation.',
           title: 'Revoke',
-          href:
-            '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fidentity)}/invitations/{(%23%2Fdefinitions%2Forganization-invitation%2Fdefinitions%2Fidentity)}',
+          href: '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fidentity)}/invitations/{(%23%2Fdefinitions%2Forganization-invitation%2Fdefinitions%2Fidentity)}',
           method: 'DELETE',
           rel: 'self'
         },
@@ -6738,8 +6707,7 @@ export const input = {
         {
           description: 'Accept Organization Invitation',
           title: 'Accept',
-          href:
-            '/organizations/invitations/{(%23%2Fdefinitions%2Forganization-invitation%2Fdefinitions%2Ftoken)}/accept',
+          href: '/organizations/invitations/{(%23%2Fdefinitions%2Forganization-invitation%2Fdefinitions%2Ftoken)}/accept',
           method: 'POST',
           rel: 'create',
           targetSchema: {
@@ -6923,8 +6891,7 @@ export const input = {
       links: [
         {
           description: 'Info for existing invoice.',
-          href:
-            '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fidentity)}/invoices/{(%23%2Fdefinitions%2Forganization-invoice%2Fdefinitions%2Fidentity)}',
+          href: '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fidentity)}/invoices/{(%23%2Fdefinitions%2Forganization-invoice%2Fdefinitions%2Fidentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -7140,8 +7107,7 @@ export const input = {
         },
         {
           description: 'Remove a member from the organization.',
-          href:
-            '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fidentity)}/members/{(%23%2Fdefinitions%2Forganization-member%2Fdefinitions%2Fidentity)}',
+          href: '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fidentity)}/members/{(%23%2Fdefinitions%2Forganization-member%2Fdefinitions%2Fidentity)}',
           method: 'DELETE',
           rel: 'destroy',
           targetSchema: {
@@ -7165,8 +7131,7 @@ export const input = {
         },
         {
           description: 'List the apps of a member.',
-          href:
-            '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fidentity)}/members/{(%23%2Fdefinitions%2Forganization-member%2Fdefinitions%2Fidentity)}/apps',
+          href: '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fidentity)}/members/{(%23%2Fdefinitions%2Forganization-member%2Fdefinitions%2Fidentity)}/apps',
           method: 'GET',
           rel: 'instances',
           targetSchema: {
@@ -7660,8 +7625,7 @@ export const input = {
         },
         {
           description: 'Info on an existing Outbound Ruleset',
-          href:
-            '/spaces/{(%23%2Fdefinitions%2Fspace%2Fdefinitions%2Fidentity)}/outbound-rulesets/{(%23%2Fdefinitions%2Foutbound-ruleset%2Fdefinitions%2Fidentity)}',
+          href: '/spaces/{(%23%2Fdefinitions%2Fspace%2Fdefinitions%2Fidentity)}/outbound-rulesets/{(%23%2Fdefinitions%2Foutbound-ruleset%2Fdefinitions%2Fidentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -7773,8 +7737,7 @@ export const input = {
         },
         {
           description: 'Complete password reset.',
-          href:
-            '/password-resets/{(%23%2Fdefinitions%2Fpassword-reset%2Fdefinitions%2Freset_password_token)}/actions/finalize',
+          href: '/password-resets/{(%23%2Fdefinitions%2Fpassword-reset%2Fdefinitions%2Freset_password_token)}/actions/finalize',
           method: 'POST',
           rel: 'self',
           schema: {
@@ -8549,8 +8512,7 @@ export const input = {
       links: [
         {
           description: 'Info for existing plan.',
-          href:
-            '/addon-services/{(%23%2Fdefinitions%2Fadd-on-service%2Fdefinitions%2Fidentity)}/plans/{(%23%2Fdefinitions%2Fplan%2Fdefinitions%2Fidentity)}',
+          href: '/addon-services/{(%23%2Fdefinitions%2Fadd-on-service%2Fdefinitions%2Fidentity)}/plans/{(%23%2Fdefinitions%2Fplan%2Fdefinitions%2Fidentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -8897,8 +8859,7 @@ export const input = {
       links: [
         {
           description: 'Info for existing release.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/releases/{(%23%2Fdefinitions%2Frelease%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/releases/{(%23%2Fdefinitions%2Frelease%2Fdefinitions%2Fidentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -9124,8 +9085,7 @@ export const input = {
       links: [
         {
           description: 'Info for existing slug.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/slugs/{(%23%2Fdefinitions%2Fslug%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/slugs/{(%23%2Fdefinitions%2Fslug%2Fdefinitions%2Fidentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -9387,8 +9347,7 @@ export const input = {
         },
         {
           description: 'Delete existing SNI endpoint.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/sni-endpoints/{(%23%2Fdefinitions%2Fsni-endpoint%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/sni-endpoints/{(%23%2Fdefinitions%2Fsni-endpoint%2Fdefinitions%2Fidentity)}',
           method: 'DELETE',
           rel: 'destroy',
           targetSchema: {
@@ -9398,8 +9357,7 @@ export const input = {
         },
         {
           description: 'Info for existing SNI endpoint.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/sni-endpoints/{(%23%2Fdefinitions%2Fsni-endpoint%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/sni-endpoints/{(%23%2Fdefinitions%2Fsni-endpoint%2Fdefinitions%2Fidentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -9422,8 +9380,7 @@ export const input = {
         },
         {
           description: 'Update an existing SNI endpoint.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/sni-endpoints/{(%23%2Fdefinitions%2Fsni-endpoint%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/sni-endpoints/{(%23%2Fdefinitions%2Fsni-endpoint%2Fdefinitions%2Fidentity)}',
           method: 'PATCH',
           rel: 'update',
           schema: {
@@ -9550,8 +9507,7 @@ export const input = {
       links: [
         {
           description: 'List permissions for a given user on a given space.',
-          href:
-            '/spaces/{(%23%2Fdefinitions%2Fspace%2Fdefinitions%2Fidentity)}/members/{(%23%2Fdefinitions%2Faccount%2Fdefinitions%2Fidentity)}',
+          href: '/spaces/{(%23%2Fdefinitions%2Fspace%2Fdefinitions%2Fidentity)}/members/{(%23%2Fdefinitions%2Faccount%2Fdefinitions%2Fidentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -9561,8 +9517,7 @@ export const input = {
         },
         {
           description: "Update an existing user's set of permissions on a space.",
-          href:
-            '/spaces/{(%23%2Fdefinitions%2Fspace%2Fdefinitions%2Fidentity)}/members/{(%23%2Fdefinitions%2Faccount%2Fdefinitions%2Fidentity)}',
+          href: '/spaces/{(%23%2Fdefinitions%2Fspace%2Fdefinitions%2Fidentity)}/members/{(%23%2Fdefinitions%2Faccount%2Fdefinitions%2Fidentity)}',
           method: 'PATCH',
           rel: 'update',
           schema: {
@@ -10018,8 +9973,7 @@ export const input = {
         },
         {
           description: 'Delete existing SSL endpoint.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/ssl-endpoints/{(%23%2Fdefinitions%2Fssl-endpoint%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/ssl-endpoints/{(%23%2Fdefinitions%2Fssl-endpoint%2Fdefinitions%2Fidentity)}',
           method: 'DELETE',
           rel: 'destroy',
           targetSchema: {
@@ -10029,8 +9983,7 @@ export const input = {
         },
         {
           description: 'Info for existing SSL endpoint.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/ssl-endpoints/{(%23%2Fdefinitions%2Fssl-endpoint%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/ssl-endpoints/{(%23%2Fdefinitions%2Fssl-endpoint%2Fdefinitions%2Fidentity)}',
           method: 'GET',
           rel: 'self',
           targetSchema: {
@@ -10053,8 +10006,7 @@ export const input = {
         },
         {
           description: 'Update an existing SSL endpoint.',
-          href:
-            '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/ssl-endpoints/{(%23%2Fdefinitions%2Fssl-endpoint%2Fdefinitions%2Fidentity)}',
+          href: '/apps/{(%23%2Fdefinitions%2Fapp%2Fdefinitions%2Fidentity)}/ssl-endpoints/{(%23%2Fdefinitions%2Fssl-endpoint%2Fdefinitions%2Fidentity)}',
           method: 'PATCH',
           rel: 'update',
           schema: {
@@ -10452,8 +10404,7 @@ export const input = {
       links: [
         {
           description: 'List all whitelisted Add-on Services for an Organization',
-          href:
-            '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fidentity)}/whitelisted-addon-services',
+          href: '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fidentity)}/whitelisted-addon-services',
           method: 'GET',
           rel: 'instances',
           targetSchema: {
@@ -10466,8 +10417,7 @@ export const input = {
         },
         {
           description: 'Whitelist an Add-on Service',
-          href:
-            '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fidentity)}/whitelisted-addon-services',
+          href: '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fidentity)}/whitelisted-addon-services',
           method: 'POST',
           rel: 'create',
           schema: {
@@ -10490,8 +10440,7 @@ export const input = {
         },
         {
           description: 'Remove a whitelisted entity',
-          href:
-            '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fidentity)}/whitelisted-addon-services/{(%23%2Fdefinitions%2Fwhitelisted-add-on-service%2Fdefinitions%2Fidentity)}',
+          href: '/organizations/{(%23%2Fdefinitions%2Forganization%2Fdefinitions%2Fidentity)}/whitelisted-addon-services/{(%23%2Fdefinitions%2Fwhitelisted-add-on-service%2Fdefinitions%2Fidentity)}',
           method: 'DELETE',
           rel: 'destroy',
           targetSchema: {

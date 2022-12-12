@@ -1,8 +1,8 @@
-import {JSONSchemaTypeName, LinkedJSONSchema, NormalizedJSONSchema, Parent} from './types/JSONSchema'
-import {appendToDescription, escapeBlockComment, isSchemaLike, justName, toSafeString, traverse} from './utils'
-import {Options} from './'
-import {DereferencedPaths} from './resolver'
-import {isDeepStrictEqual} from 'util'
+import { JSONSchemaTypeName, LinkedJSONSchema, NormalizedJSONSchema, Parent } from './types/JSONSchema'
+import { appendToDescription, escapeBlockComment, isSchemaLike, justName, toSafeString, traverse } from './utils'
+import { Options } from './'
+import { DereferencedPaths } from './resolver'
+import { isDeepStrictEqual } from 'util'
 
 type Rule = (
   schema: LinkedJSONSchema,
@@ -142,7 +142,7 @@ rules.set('Normalize schema.minItems', (schema, _fileName, options) => {
   if (!isArrayType(schema)) {
     return
   }
-  const {minItems} = schema
+  const { minItems } = schema
   schema.minItems = typeof minItems === 'number' ? minItems : 0
   // cannot normalize maxItems because maxItems = 0 has an actual meaning
 })
@@ -154,7 +154,7 @@ rules.set('Remove maxItems if it is big enough to likely cause OOMs', (schema, _
   if (!isArrayType(schema)) {
     return
   }
-  const {maxItems, minItems} = schema
+  const { maxItems, minItems } = schema
   // minItems is guaranteed to be a number after the previous rule runs
   if (maxItems !== undefined && maxItems - (minItems as number) > options.maxItems) {
     delete schema.maxItems
@@ -165,7 +165,7 @@ rules.set('Normalize schema.items', (schema, _fileName, options) => {
   if (options.ignoreMinAndMaxItems) {
     return
   }
-  const {maxItems, minItems} = schema
+  const { maxItems, minItems } = schema
   const hasMaxItems = typeof maxItems === 'number' && maxItems >= 0
   const hasMinItems = typeof minItems === 'number' && minItems > 0
 

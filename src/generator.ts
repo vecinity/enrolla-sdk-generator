@@ -1,5 +1,5 @@
-import {memoize, omit} from 'lodash'
-import {DEFAULT_OPTIONS, Options} from './index'
+import { memoize, omit } from 'lodash'
+import { DEFAULT_OPTIONS, Options } from './index'
 import {
   AST,
   ASTWithStandaloneName,
@@ -14,7 +14,7 @@ import {
   TUnion,
   T_UNKNOWN
 } from './types/AST'
-import {log, toSafeString} from './utils'
+import { log, toSafeString } from './utils'
 
 export function generate(ast: AST, options = DEFAULT_OPTIONS): string {
   return (
@@ -74,7 +74,7 @@ function declareNamedInterfaces(ast: AST, options: Options, rootASTName: string,
       type = [
         hasStandaloneName(ast) &&
           (ast.standaloneName === rootASTName || options.declareExternallyReferenced) &&
-          generateStandaloneClass(ast, options),
+          generateStandaloneInterface(ast, options),
         getSuperTypesAndParams(ast)
           .map(ast => declareNamedInterfaces(ast, options, rootASTName, processed))
           .filter(Boolean)
@@ -179,7 +179,7 @@ function generateRawType(ast: AST, options: Options): string {
     case 'BOOLEAN':
       return 'boolean'
     case 'INTERFACE':
-      return generateClass(ast, options)
+      return generateInterface(ast, options)
     case 'INTERSECTION':
       return generateSetOperation(ast, options)
     case 'LITERAL':
@@ -290,27 +290,23 @@ function generateSetOperation(ast: TIntersection | TUnion, options: Options): st
   return members.length === 1 ? members[0] : '(' + members.join(' ' + separator + ' ') + ')'
 }
 
-function generateClass(ast: TInterface, options: Options): string {
+function generateInterface(ast: TInterface, options: Options): string {
   return (
     `{` +
     '\n' +
-    '  contructor(private configService: ConfigService, private objectId: string) {}\n\n' +
     ast.params
-      .filter(_ => !_.isPatternProperty && !_.isUnreachableDefinition && !(_.keyName === '[k: string]'))
+      .filter(_ => !_.isPatternProperty && !_.isUnreachableDefinition)
       .map(
-        ({isRequired, keyName, ast}) =>
+        ({ isRequired, keyName, ast }) =>
           [isRequired, keyName, ast, generateType(ast, options)] as [boolean, string, AST, string]
       )
       .map(
         ([isRequired, keyName, ast, type]) =>
           (hasComment(ast) && !ast.standaloneName ? generateComment(ast.comment) + '\n' : '') +
           escapeKeyName(keyName) +
-          '(): ' +
-          (hasStandaloneName(ast) ? toSafeString(type) : type) +
-          (isRequired ? '' : '| undefined') +
-          ' {\n' +
-          `    this.configService.get(this.objectId, '${keyName}')\n` +
-          '  }\n'
+          (isRequired ? '' : '?') +
+          ': ' +
+          (hasStandaloneName(ast) ? toSafeString(type) : type)
       )
       .join('\n') +
     '\n' +
@@ -329,20 +325,20 @@ function generateStandaloneEnum(ast: TEnum, options: Options): string {
     (options.enableConstEnums ? 'const ' : '') +
     `enum ${toSafeString(ast.standaloneName)} {` +
     '\n' +
-    ast.params.map(({ast, keyName}) => keyName + ' = ' + generateType(ast, options)).join(',\n') +
+    ast.params.map(({ ast, keyName }) => keyName + ' = ' + generateType(ast, options)).join(',\n') +
     '\n' +
     '}'
   )
 }
 
-function generateStandaloneClass(ast: TNamedInterface, options: Options): string {
+function generateStandaloneInterface(ast: TNamedInterface, options: Options): string {
   return (
     (hasComment(ast) ? generateComment(ast.comment) + '\n' : '') +
-    `export class ${toSafeString(ast.standaloneName)} ` +
+    `export interface ${toSafeString(ast.standaloneName)} ` +
     (ast.superTypes.length > 0
       ? `extends ${ast.superTypes.map(superType => toSafeString(superType.standaloneName)).join(', ')} `
       : '') +
-    generateClass(ast, options)
+    generateInterface(ast, options)
   )
 }
 

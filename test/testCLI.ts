@@ -1,13 +1,13 @@
 import test from 'ava'
-import {execSync} from 'child_process'
-import {readFileSync, unlinkSync, readdirSync, existsSync, lstatSync} from 'fs'
-import {resolve, posix} from 'path'
+import { execSync } from 'child_process'
+import { readFileSync, unlinkSync, readdirSync, existsSync, lstatSync } from 'fs'
+import { resolve, posix } from 'path'
 import rimraf = require('rimraf')
 
 export function run() {
   test('pipe in, pipe out', t => {
     t.snapshot(
-      execSync('shx cat ./test/resources/ReferencedType.json | node dist/src/cli.js', {encoding: 'utf-8'}).toString()
+      execSync('shx cat ./test/resources/ReferencedType.json | node dist/src/cli.js', { encoding: 'utf-8' }).toString()
     )
   })
 

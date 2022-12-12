@@ -683,7 +683,7 @@ export const input = {
         }
       ]
     },
-    jspm: {$ref: '#'}
+    jspm: { $ref: '#' }
   },
   anyOf: [
     {

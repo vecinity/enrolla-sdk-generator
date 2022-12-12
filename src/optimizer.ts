@@ -1,8 +1,8 @@
-import {uniqBy} from 'lodash'
-import {Options} from '.'
-import {generateType} from './generator'
-import {AST, T_ANY, T_UNKNOWN} from './types/AST'
-import {log} from './utils'
+import { uniqBy } from 'lodash'
+import { Options } from '.'
+import { generateType } from './generator'
+import { AST, T_ANY, T_UNKNOWN } from './types/AST'
+import { log } from './utils'
 
 export function optimize(ast: AST, options: Options, processed = new Set<AST>()): AST {
   if (processed.has(ast)) {
@@ -14,7 +14,7 @@ export function optimize(ast: AST, options: Options, processed = new Set<AST>())
   switch (ast.type) {
     case 'INTERFACE':
       return Object.assign(ast, {
-        params: ast.params.map(_ => Object.assign(_, {ast: optimize(_.ast, options, processed)}))
+        params: ast.params.map(_ => Object.assign(_, { ast: optimize(_.ast, options, processed) }))
       })
     case 'INTERSECTION':
     case 'UNION':
@@ -69,6 +69,6 @@ function omitStandaloneName<A extends AST>(ast: A): A {
     case 'ENUM':
       return ast
     default:
-      return {...ast, standaloneName: undefined}
+      return { ...ast, standaloneName: undefined }
   }
 }

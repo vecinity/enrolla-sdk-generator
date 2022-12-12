@@ -1,8 +1,8 @@
-import {JSONSchema4Type, JSONSchema4TypeName} from 'json-schema'
-import {findKey, includes, isPlainObject, map, memoize, omit} from 'lodash'
-import {format} from 'util'
-import {Options} from './'
-import {typesOfSchema} from './typesOfSchema'
+import { JSONSchema4Type, JSONSchema4TypeName } from 'json-schema'
+import { findKey, includes, isPlainObject, map, memoize, omit } from 'lodash'
+import { format } from 'util'
+import { Options } from './'
+import { typesOfSchema } from './typesOfSchema'
 import {
   AST,
   T_ANY,
@@ -23,7 +23,7 @@ import {
   SchemaSchema,
   SchemaType
 } from './types/JSONSchema'
-import {generateName, log, maybeStripDefault, maybeStripNameHints} from './utils'
+import { generateName, log, maybeStripDefault, maybeStripNameHints } from './utils'
 
 export type Processed = Map<LinkedJSONSchema, Map<SchemaType, AST>>
 
@@ -247,7 +247,7 @@ function parseNonLiteral(
         keyName,
         standaloneName: standaloneName(schema, keyNameFromDefinition, usedNames),
         params: (schema.type as JSONSchema4TypeName[]).map(type => {
-          const member: LinkedJSONSchema = {...omit(schema, '$id', 'description', 'title'), type}
+          const member: LinkedJSONSchema = { ...omit(schema, '$id', 'description', 'title'), type }
           return parse(maybeStripDefault(member as any), options, undefined, processed, usedNames)
         }),
         type: 'UNION'
@@ -431,7 +431,7 @@ via the \`definition\` "${key}".`
   }
 }
 
-type Definitions = {[k: string]: LinkedJSONSchema}
+type Definitions = { [k: string]: LinkedJSONSchema }
 
 function getDefinitions(
   schema: LinkedJSONSchema,
