@@ -1,10 +1,10 @@
 {
-  "name": "json-schema-to-typescript",
-  "version": "11.0.2",
+  "name": "enrolla-cli",
+  "version": "0.0.1",
   "description": "compile json schema to typescript typings",
   "main": "dist/src/index.js",
   "bin": {
-    "json2ts": "dist/src/cli.js"
+    "enrolla": "dist/src/cli.js"
   },
   "typings": "dist/src/index.d.ts",
   "engines": {

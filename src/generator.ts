@@ -1,5 +1,5 @@
-import {memoize, omit} from 'lodash'
-import {DEFAULT_OPTIONS, Options} from './index'
+import { memoize, omit } from 'lodash'
+import { DEFAULT_OPTIONS, Options } from './index'
 import {
   AST,
   ASTWithStandaloneName,
@@ -14,7 +14,7 @@ import {
   TUnion,
   T_UNKNOWN
 } from './types/AST'
-import {log, toSafeString} from './utils'
+import { log, toSafeString } from './utils'
 
 export function generate(ast: AST, options = DEFAULT_OPTIONS): string {
   return (
@@ -297,7 +297,7 @@ function generateInterface(ast: TInterface, options: Options): string {
     ast.params
       .filter(_ => !_.isPatternProperty && !_.isUnreachableDefinition)
       .map(
-        ({isRequired, keyName, ast}) =>
+        ({ isRequired, keyName, ast }) =>
           [isRequired, keyName, ast, generateType(ast, options)] as [boolean, string, AST, string]
       )
       .map(
@@ -325,7 +325,7 @@ function generateStandaloneEnum(ast: TEnum, options: Options): string {
     (options.enableConstEnums ? 'const ' : '') +
     `enum ${toSafeString(ast.standaloneName)} {` +
     '\n' +
-    ast.params.map(({ast, keyName}) => keyName + ' = ' + generateType(ast, options)).join(',\n') +
+    ast.params.map(({ ast, keyName }) => keyName + ' = ' + generateType(ast, options)).join(',\n') +
     '\n' +
     '}'
   )

@@ -1,9 +1,9 @@
 import test from 'ava'
-import {readdirSync} from 'fs'
-import {find} from 'lodash'
-import {join} from 'path'
-import {compile, JSONSchema, Options} from '../src'
-import {log, stripExtension} from '../src/utils'
+import { readdirSync } from 'fs'
+import { find } from 'lodash'
+import { join } from 'path'
+import { compile, JSONSchema, Options } from '../src'
+import { log, stripExtension } from '../src/utils'
 
 const dir = __dirname + '/e2e'
 

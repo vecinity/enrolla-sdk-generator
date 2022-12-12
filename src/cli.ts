@@ -2,13 +2,13 @@
 
 import minimist = require('minimist')
 import getStdin from 'get-stdin'
-import {readFile, writeFile, existsSync, lstatSync, readdirSync} from 'mz/fs'
+import { readFile, writeFile, existsSync, lstatSync, readdirSync } from 'mz/fs'
 import * as mkdirp from 'mkdirp'
 import glob from 'glob-promise'
 import isGlob = require('is-glob')
-import {join, resolve, dirname, basename} from 'path'
-import {compile, Options} from './index'
-import {pathTransform, error} from './utils'
+import { join, resolve, dirname, basename } from 'path'
+import { compile, Options } from './index'
+import { pathTransform, error } from './utils'
 
 main(
   minimist(process.argv.slice(2), {
@@ -32,7 +32,7 @@ async function main(argv: minimist.ParsedArgs) {
   const ISGLOB = isGlob(argIn)
   const ISDIR = isDir(argIn)
 
-  if ((ISGLOB || ISDIR) && argOut && argOut.includes('.d.ts')) {
+  if ((ISGLOB || ISDIR) && argOut && argOut.includes('.ts')) {
     throw new ReferenceError(
       `You have specified a single file ${argOut} output for a multi file input ${argIn}. This feature is not yet supported, refer to issue #272 (https://github.com/bcherny/json-schema-to-typescript/issues/272)`
     )
@@ -77,7 +77,7 @@ async function processGlob(argIn: string, argOut: string | undefined, argv: Part
 
   // careful to do this serially
   results.forEach(([file, result]) => {
-    const outputPath = argOut && `${argOut}/${basename(file, '.json')}.d.ts`
+    const outputPath = argOut && `${argOut}/${basename(file, '.json')}.ts`
     outputResult(result, outputPath)
   })
 }
@@ -99,7 +99,7 @@ async function processDir(argIn: string, argOut: string | undefined, argv: Parti
 
   // careful to do this serially
   results.forEach(([file, result, outputPath]) =>
-    outputResult(result, outputPath ? `${outputPath}/${basename(file, '.json')}.d.ts` : undefined)
+    outputResult(result, outputPath ? `${outputPath}/${basename(file, '.json')}.ts` : undefined)
   )
 }
 
@@ -142,10 +142,10 @@ function printHelp() {
   process.stdout.write(
     `
 ${pkg.name} ${pkg.version}
-Usage: json2ts [--input, -i] [IN_FILE] [--output, -o] [OUT_FILE] [OPTIONS]
+Usage: enrolla [--input, -i] [IN_FILE] [--output, -o] [OUT_FILE] [OPTIONS]
 
 With no IN_FILE, or when IN_FILE is -, read standard input.
-With no OUT_FILE and when IN_FILE is specified, create .d.ts file in the same directory.
+With no OUT_FILE and when IN_FILE is specified, create .ts file in the same directory.
 With no OUT_FILE nor IN_FILE, write to standard output.
 
 You can use any of the following options by adding them at the end.
