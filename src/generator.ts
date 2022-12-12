@@ -20,7 +20,7 @@ export function generate(ast: AST, options = DEFAULT_OPTIONS): string {
   return (
     [
       options.bannerComment,
-      `import { ConfigClient } from "enrolla-ts"`,
+      `import { ConfigClient } from "@enrolla/enrolla-ts"`,
       declareNamedTypes(ast, options, ast.standaloneName!),
       declareNamedInterfaces(ast, options, ast.standaloneName!),
       declareEnums(ast, options)
@@ -305,12 +305,13 @@ function generateClass(ast: TInterface, options: Options): string {
       .map(
         ([isRequired, keyName, ast, type]) =>
           (hasComment(ast) && !ast.standaloneName ? generateComment(ast.comment) + '\n' : '') +
+          'async ' +
           escapeKeyName(keyName) +
-          '(): ' +
+          '(): Promise<' +
           (hasStandaloneName(ast) ? toSafeString(type) : type) +
           (isRequired ? '' : '| undefined') +
-          ' {\n' +
-          `    return ConfigClient.get(this.objectId, '${keyName}')\n` +
+          '> {\n' +
+          `    return await ConfigClient.get(this.objectId, '${keyName}')\n` +
           '  }\n'
       )
       .join('\n') +
