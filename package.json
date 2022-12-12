@@ -1,7 +1,7 @@
 {
   "name": "@enrolla/cli",
-  "version": "0.0.1",
-  "description": "compile json schema to typescript typings",
+  "version": "0.0.2",
+  "description": "create classes for enrolla customer configurations",
   "main": "dist/src/index.js",
   "bin": {
     "enrolla": "dist/src/cli.js"

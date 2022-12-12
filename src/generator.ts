@@ -311,7 +311,9 @@ function generateClass(ast: TInterface, options: Options): string {
           (hasStandaloneName(ast) ? toSafeString(type) : type) +
           (isRequired ? '' : '| undefined') +
           '> {\n' +
-          `    return await ConfigClient.get(this.objectId, '${keyName}')\n` +
+          `    return await ConfigClient.get(this.objectId, '${keyName}') as ${
+            hasStandaloneName(ast) ? toSafeString(type) : type
+          }\n` +
           '  }\n'
       )
       .join('\n') +
