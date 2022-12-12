@@ -1,6 +1,6 @@
 {
   "name": "enrolla-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "compile json schema to typescript typings",
   "main": "dist/src/index.js",
   "bin": {
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bcherny/json-schema-to-typescript.git"
+    "url": "git+https://github.com/vecinity/enrolla-sdk-generator"
   },
   "keywords": [
     "json",
@@ -39,12 +39,11 @@
     "typing",
     "share"
   ],
-  "author": "Boris Cherny <boris@performancejs.com> (http://performancejs.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bcherny/json-schema-to-typescript/issues"
+    "url": "https://github.com/vecinity/enrolla-sdk-generator/issues"
   },
-  "homepage": "https://github.com/bcherny/json-schema-to-typescript#readme",
+  "homepage": "https://github.com/vecinity/enrolla-sdk-generator#readme",
   "dependencies": {
     "@bcherny/json-schema-ref-parser": "9.0.9",
     "@types/json-schema": "^7.0.11",

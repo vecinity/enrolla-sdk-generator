@@ -20,6 +20,7 @@ export function generate(ast: AST, options = DEFAULT_OPTIONS): string {
   return (
     [
       options.bannerComment,
+      `import { ConfigClient } from "enrolla-ts"`,
       declareNamedTypes(ast, options, ast.standaloneName!),
       declareNamedInterfaces(ast, options, ast.standaloneName!),
       declareEnums(ast, options)
@@ -74,7 +75,7 @@ function declareNamedInterfaces(ast: AST, options: Options, rootASTName: string,
       type = [
         hasStandaloneName(ast) &&
           (ast.standaloneName === rootASTName || options.declareExternallyReferenced) &&
-          generateStandaloneInterface(ast, options),
+          generateStandaloneClass(ast, options),
         getSuperTypesAndParams(ast)
           .map(ast => declareNamedInterfaces(ast, options, rootASTName, processed))
           .filter(Boolean)
@@ -179,7 +180,7 @@ function generateRawType(ast: AST, options: Options): string {
     case 'BOOLEAN':
       return 'boolean'
     case 'INTERFACE':
-      return generateInterface(ast, options)
+      return generateClass(ast, options)
     case 'INTERSECTION':
       return generateSetOperation(ast, options)
     case 'LITERAL':
@@ -290,12 +291,13 @@ function generateSetOperation(ast: TIntersection | TUnion, options: Options): st
   return members.length === 1 ? members[0] : '(' + members.join(' ' + separator + ' ') + ')'
 }
 
-function generateInterface(ast: TInterface, options: Options): string {
+function generateClass(ast: TInterface, options: Options): string {
   return (
     `{` +
     '\n' +
+    '  constructor(private objectId: string) {}\n\n' +
     ast.params
-      .filter(_ => !_.isPatternProperty && !_.isUnreachableDefinition)
+      .filter(_ => !_.isPatternProperty && !_.isUnreachableDefinition && !(_.keyName === '[k: string]'))
       .map(
         ({ isRequired, keyName, ast }) =>
           [isRequired, keyName, ast, generateType(ast, options)] as [boolean, string, AST, string]
@@ -304,9 +306,12 @@ function generateInterface(ast: TInterface, options: Options): string {
         ([isRequired, keyName, ast, type]) =>
           (hasComment(ast) && !ast.standaloneName ? generateComment(ast.comment) + '\n' : '') +
           escapeKeyName(keyName) +
-          (isRequired ? '' : '?') +
-          ': ' +
-          (hasStandaloneName(ast) ? toSafeString(type) : type)
+          '(): ' +
+          (hasStandaloneName(ast) ? toSafeString(type) : type) +
+          (isRequired ? '' : '| undefined') +
+          ' {\n' +
+          `    return ConfigClient.get(this.objectId, '${keyName}')\n` +
+          '  }\n'
       )
       .join('\n') +
     '\n' +
@@ -331,14 +336,14 @@ function generateStandaloneEnum(ast: TEnum, options: Options): string {
   )
 }
 
-function generateStandaloneInterface(ast: TNamedInterface, options: Options): string {
+function generateStandaloneClass(ast: TNamedInterface, options: Options): string {
   return (
     (hasComment(ast) ? generateComment(ast.comment) + '\n' : '') +
-    `export interface ${toSafeString(ast.standaloneName)} ` +
+    `export class ${toSafeString(ast.standaloneName)} ` +
     (ast.superTypes.length > 0
       ? `extends ${ast.superTypes.map(superType => toSafeString(superType.standaloneName)).join(', ')} `
       : '') +
-    generateInterface(ast, options)
+    generateClass(ast, options)
   )
 }
 
