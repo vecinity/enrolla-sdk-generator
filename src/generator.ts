@@ -20,7 +20,7 @@ export function generate(ast: AST, options = DEFAULT_OPTIONS): string {
   return (
     [
       options.bannerComment,
-      `import { ConfigClient } from "@enrolla/enrolla-ts"`,
+      `import { ConfigClient } from "@enrolla/ts-sdk"`,
       declareNamedTypes(ast, options, ast.standaloneName!),
       declareNamedInterfaces(ast, options, ast.standaloneName!),
       declareEnums(ast, options)

@@ -1,6 +1,6 @@
 {
   "name": "@enrolla/cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "create classes for enrolla customer configurations",
   "main": "dist/src/index.js",
   "bin": {
